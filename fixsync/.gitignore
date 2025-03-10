@@ -1,0 +1,21 @@
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Entorno Virtual
+venv/
+.env
+
+# Configuración de Django
+db.sqlite3
+fixsync/__pycache__/
+
+# Configuración de Docker
+*.log
+pgdata/
+volumes/
+.dockerignore
+docker-compose.override.yml
+
+# Configuración de VS Code
+.vscode/
