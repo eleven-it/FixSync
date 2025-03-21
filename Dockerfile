@@ -13,6 +13,11 @@ RUN apt-get update && apt-get install -y curl \
 # Verificar la instalación de Node.js y npm
 RUN node -v && npm -v
 
+RUN apt-get update && apt-get install -y \
+    gcc \
+    default-libmysqlclient-dev \
+    python3-dev
+
 # Copiar los archivos al contenedor
 COPY requirements.txt requirements.txt
 

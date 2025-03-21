@@ -25,9 +25,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    environment:
-      DJANGO_SETTINGS_MODULE: django_project.settings
-      DATABASE_URL: postgres://myuser:mypassword@db:5432/mydatabase
+    env_file:
+      - .env
 
 volumes:
   postgres_data:
