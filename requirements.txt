@@ -9,3 +9,4 @@ requests
 PyJWT==2.8.0
 cryptography
 gunicorn
+python-decouple
