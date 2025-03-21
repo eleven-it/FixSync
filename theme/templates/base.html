@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio con Tailwind{% endblock %}</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+
+    <!-- Agregar cualquier otro CSS o fuentes aquí -->
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-500 text-white py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">Mi Proyecto</a>
+            <ul class="flex space-x-4">
+                <li><a href="/" class="hover:underline">Inicio</a></li>
+                <li><a href="#" class="hover:underline">Acerca</a></li>
+                <li><a href="#" class="hover:underline">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <main class="container mx-auto px-6 py-8">
+        {% block content %}
+        <h1 class="text-4xl font-bold text-blue-600">¡Bienvenido a mi sitio con Tailwind CSS!</h1>
+        <p class="mt-4 text-lg">Esta es una plantilla base para Django con Tailwind.</p>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2025 Mi Proyecto. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
