@@ -21,8 +21,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("login.urls", namespace="login")),  # Se agrega namespace a la app
-    path("accounts/", include("allauth.urls")),
+    path('', include('clientes.urls')),  # Incluir las URLs de clientes
+    path("login/", include("login.urls")),  
+    path("dashboard/", include("dashboard.urls", namespace="dashboard")),
 ]
 
 if settings.DEBUG:

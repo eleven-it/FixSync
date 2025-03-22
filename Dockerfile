@@ -24,6 +24,17 @@ COPY requirements.txt requirements.txt
 # Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Configurar variables de entorno para Firebase
+#ENV FIREBASE_CREDENTIALS_PATH=/app/firebase_credentials.json
+
+# Copia la clave privada de Firebase (asegúrate de tenerla en tu máquina local)
+COPY firebase_credentials.json /app/firebase_credentials.json
+
+# Exponer el puerto del API
+EXPOSE 8000
+
+RUN mkdir /app/staticfiles
+
 # Copiar el resto del código del proyecto
 COPY . .
 

@@ -21,6 +21,7 @@ services:
     volumes:
       - .:/app
       - static_volume:/app/staticfiles
+       - ./firebase_credentials.json:/app/firebase_credentials.json  # Montar la clave en el contenedor
     ports:
       - "8000:8000"
     depends_on:
